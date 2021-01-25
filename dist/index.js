@@ -1099,7 +1099,7 @@ let deploy = function (params) {
                         ${privateArg} `;
 
       const cwd = path.resolve(folder);
-      exec.exec(command, [], { cwd }).then(resolve).catch(reject);
+      exec.exec("which npx", [], { cwd }).then(resolve).catch(reject);
     } catch (e) {
       reject(e);
     }
